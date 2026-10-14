@@ -1,0 +1,24 @@
+{
+  "name": "website",
+  "private": true,
+  "scripts": {
+    "typecheck": "bun check",
+    "build:css": "sass src/styles:.generated/styles --style=expanded --no-source-map && css-beautify -r .generated/styles/*.css",
+    "build:html": "bunx --bun eleventy",
+    "build:js": "js-beautify -r '_site/**/*.js'",
+    "build": "bun run build:css && bun run build:html && bun run build:js",
+    "dev": "sass --watch src/styles:.generated/styles & bunx --bun eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@types/bun": "latest",
+    "js-beautify": "^2.0.3",
+    "sass": "^1.105.1"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  },
+  "trustedDependencies": [
+    "@parcel/watcher"
+  ]
+}
