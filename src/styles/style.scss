@@ -1,4 +1,5 @@
-$main-font: "FiraCode Nerd Font", monospace;
+@use "fonts";
+$main-font: "IosevkaEtoile", serif;
 
 h1 {
   font-family: $main-font;
