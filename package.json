@@ -23,6 +23,7 @@
     "@parcel/watcher"
   ],
   "dependencies": {
+    "@fontsource/fira-code": "^5.3.0",
     "@fontsource/iosevka-etoile": "^5.3.0"
   }
 }
