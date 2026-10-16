@@ -1,6 +1,6 @@
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ ".generated/styles": "styles" });
-  eleventyConfig.addPassthroughCopy({ "node_modules/@fontsource/**/*.woff2": "fonts" });
+  eleventyConfig.addPassthroughCopy({ "node_modules/@fontsource/**/*.woff2": "fontpool" });
   eleventyConfig.addWatchTarget(".generated/styles");
   return {
     dir: { input: "src", output: "_site" },
