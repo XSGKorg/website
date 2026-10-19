@@ -1,8 +1,10 @@
+import '@fontsource/fira-code';
+import '@fontsource/iosevka-aile';
+import '@fontsource/iosevka-etoile';
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ ".generated/styles": "styles" });
-  eleventyConfig.addPassthroughCopy({ "node_modules/@fontsource/**/*.woff2": "fontpool" });
   eleventyConfig.addWatchTarget(".generated/styles");
   eleventyConfig.addPlugin(sitemap, {
     sitemap: {

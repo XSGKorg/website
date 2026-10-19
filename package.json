@@ -23,6 +23,7 @@
   ],
   "dependencies": {
     "@fontsource/fira-code": "^5.3.0",
+    "@fontsource/iosevka-aile": "^5.3.0",
     "@fontsource/iosevka-etoile": "^5.3.0",
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0"
   }

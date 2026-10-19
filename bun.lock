@@ -6,6 +6,7 @@
       "name": "website",
       "dependencies": {
         "@fontsource/fira-code": "^5.3.0",
+        "@fontsource/iosevka-aile": "^5.3.0",
         "@fontsource/iosevka-etoile": "^5.3.0",
         "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
       },
@@ -43,6 +44,8 @@
     "@11ty/recursive-copy": ["@11ty/recursive-copy@4.0.4", "", { "dependencies": { "errno": "^1.0.0", "junk": "^3.1.0", "minimatch": "^3.1.5", "slash": "^3.0.0" } }, "sha512-oI7m8pa7/IAU/3lqRU9vjBbs20iKFo7x+1K9kT3aVira6scc1X9MjBdgLCHzLJeJ7iB6wydioA+kr9/qPnvmlQ=="],
 
     "@fontsource/fira-code": ["@fontsource/fira-code@5.3.0", "", {}, "sha512-EJL968RJRkakubAj/coU8pSUaeTE5UNoRjtzAr6kGiSZ3jWuN8/AKWHwym/PFUaQL1q7IL/H+EXs4358YhrTBQ=="],
+
+    "@fontsource/iosevka-aile": ["@fontsource/iosevka-aile@5.3.0", "", {}, "sha512-XwbV3etYsHR0WZlMRJ4sXKdPSE764dQaC9lrM5qoN/yCd2BDbT8WDCJldTflOT0wbCDzS8VKll+oyTgfSgmG6g=="],
 
     "@fontsource/iosevka-etoile": ["@fontsource/iosevka-etoile@5.3.0", "", {}, "sha512-fuUgKPpwQxNghd3tak28lfwAOLd7wI7A9Bttx+BuKCqV9IBYA469dMQAVAnDnzxBC5xItASAJvEfMlvn51PfWQ=="],
 
