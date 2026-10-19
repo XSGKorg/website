@@ -1,0 +1,5 @@
+{
+    "editor.formatOnSave": true,
+    "diffEditor.codeLens": true,
+    "chat.agent.enabled": false
+}
