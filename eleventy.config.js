@@ -1,7 +1,3 @@
-import '@fontsource/fira-code';
-import '@fontsource/iosevka-aile';
-import '@fontsource/iosevka-etoile';
-
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ ".generated/styles": "styles" });
   eleventyConfig.addPassthroughCopy({
