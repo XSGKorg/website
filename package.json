@@ -5,18 +5,14 @@
   "private": true,
   "scripts": {
     "typecheck": "bun check",
-    "build:css": "sass src/styles:.generated/styles --style=expanded --no-source-map && css-beautify -r .generated/styles/*.css",
-    "build:html": "bunx --bun eleventy",
-    "build:js": "js-beautify -r '_site/**/*.js'",
-    "build": "bun run build:css && bun run build:html && bun run build:js",
-    "dev": "sass --watch src/styles:.generated/styles & bunx --bun eleventy --serve",
-    "serve": "sass --watch src/styles:.generated/styles & bunx --bun eleventy --serve"
+    "build:11ty": "bunx --bun eleventy",
+    "build": "bun run build:11ty",
+    "dev": "bunx --bun eleventy --serve",
+    "serve": "bunx --bun eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
-    "@types/bun": "latest",
-    "js-beautify": "^2.0.3",
-    "sass": "^1.105.1"
+    "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^7"
@@ -28,6 +24,10 @@
     "@fontsource/fira-code": "^5.3.0",
     "@fontsource/iosevka-aile": "^5.3.0",
     "@fontsource/iosevka-etoile": "^5.3.0",
-    "badge-maker": "^6.0.0"
+    "@mdx-js/mdx": "^3.1.1",
+    "badge-maker": "^6.0.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "sass": "^1.106.1"
   }
 }
