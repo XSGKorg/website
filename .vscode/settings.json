@@ -1,5 +1,6 @@
 {
     "editor.formatOnSave": true,
     "diffEditor.codeLens": true,
-    "chat.agent.enabled": false
+    "chat.agent.enabled": false,
+    "editor.formatOnSaveMode": "modificationsIfAvailable"
 }
