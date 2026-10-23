@@ -3,8 +3,20 @@ import { evaluate } from "@mdx-js/mdx";
 import { renderToStaticMarkup } from "react-dom/server";
 import * as runtime from "react/jsx-runtime";
 import * as sass from "sass";
+import toml from "@iarna/toml";
+// const faviconsPlugin = require("eleventy-plugin-gen-favicons");
 
 export default function (eleventyConfig) {
+  // faviconPlugin
+  // eleventyConfig.addPlugin(faviconsPlugin, { "outputDir": "_site" });
+
+  // TOML
+  eleventyConfig.setFrontMatterParsingOptions({
+    engines: {
+      toml: toml.parse.bind(toml),
+    },
+  });
+
   // MDX
   eleventyConfig.addExtension("mdx", {
     compile: async (str, inputPath) => {
@@ -22,7 +34,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addTemplateFormats("mdx")
 
   // Fonts
-  eleventyConfig.addPassthroughCopy({ ".generated/styles": "styles" });
   eleventyConfig.addPassthroughCopy({
     "node_modules/@fontsource/fira-code/index.css": "fonts/fira-code/index.css",
     "node_modules/@fontsource/fira-code/files": "fonts/fira-code/files",
@@ -31,7 +42,6 @@ export default function (eleventyConfig) {
     "node_modules/@fontsource/iosevka-etoile/index.css": "fonts/iosevka-etoile/index.css",
     "node_modules/@fontsource/iosevka-etoile/files": "fonts/iosevka-etoile/files",
   });
-  eleventyConfig.addWatchTarget(".generated/styles");
 
   // SASS
   eleventyConfig.addTemplateFormats("scss");
@@ -51,7 +61,11 @@ export default function (eleventyConfig) {
   });
 
   return {
-    dir: { input: "src", output: "_site" },
+    dir: {
+      includes: "_includes",
+      input: "src",
+      output: "_site"
+    },
     pathPrefix: process.env.PATH_PREFIX || "/",
   };
 }

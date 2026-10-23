@@ -2,6 +2,10 @@ $main-font: "Iosevka Aile", serif;
 $disp-font: "Iosevka Etoile", serif;
 $mono-font: "Fira Code", monospace;
 
+@import "/fonts/fira-code/index.css";
+@import "/fonts/iosevka-aile/index.css";
+@import "/fonts/iosevka-etoile/index.css";
+
 h1 {
   font-family: $main-font;
 }
