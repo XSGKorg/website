@@ -2,5 +2,9 @@
     "editor.formatOnSave": true,
     "diffEditor.codeLens": true,
     "chat.agent.enabled": false,
-    "editor.formatOnSaveMode": "modificationsIfAvailable"
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "files.associations": {
+        "*.mdx": "markdown",
+        "*.jsx": "javascript",
+    }
 }
