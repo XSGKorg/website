@@ -12,6 +12,7 @@
         "@mdx-js/mdx": "^3.1.1",
         "badge-maker": "^6.0.0",
         "eleventy-plugin-gen-favicons": "^1.1.3",
+        "eleventy-plugin-robotstxt": "^1.0.2",
         "react": "^19.3.1",
         "react-dom": "^19.3.1",
         "sass": "^1.106.1",
@@ -289,6 +290,8 @@
     "ee-first": ["ee-first@1.1.1", "", {}, "sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow=="],
 
     "eleventy-plugin-gen-favicons": ["eleventy-plugin-gen-favicons@1.1.3", "", { "dependencies": { "fast-deep-equal": "^3.1.3", "png-to-ico": "^2.1.8", "sharp": "^0.33.4" } }, "sha512-MvE2uDiFNU82b8m8L8hOQRANE2ljjZWglXwqxSG7ECgr5QLUIE8nyGQ2xDLutzXxti2ljVhttwpjU5z4P2SCeg=="],
+
+    "eleventy-plugin-robotstxt": ["eleventy-plugin-robotstxt@1.0.2", "", { "peerDependencies": { "@11ty/eleventy": "^3.0.0" } }, "sha512-W3Rr0232kT0IYvot9Vbf8QOksHFEaRHNwTBzlPLBHoE7lLd2uDyJqZmzM1XGjoOZ3DDJSxWiweIOOtiPQt+cVg=="],
 
     "encodeurl": ["encodeurl@2.0.0", "", {}, "sha512-Q0n9HRi4m6JuGIV1eFlmvJB7ZEVxu93IrMyiMsGC0lrMJMWzRgx6WGquyfQgZVb31vhGgXnfmPNNXmxnOkRBrg=="],
 

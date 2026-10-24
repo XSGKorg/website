@@ -5,8 +5,21 @@ import * as runtime from "react/jsx-runtime";
 import * as sass from "sass";
 import toml from "@iarna/toml";
 // const faviconsPlugin = require("eleventy-plugin-gen-favicons");
+const EleventyPluginRobotsTxt = require("eleventy-plugin-robotstxt");
 
 export default function (eleventyConfig) {
+  // robots.txt
+  const eleventyPluginRobotsTxtOptions = {
+    rules: new Map([
+      ["ia_archiver", [{ allow: "/" }]],
+      ["*", [{ disallow: "/" }]],
+    ]),
+  };
+  eleventyConfig.addPlugin(
+    EleventyPluginRobotsTxt,
+    eleventyPluginRobotsTxtOptions,
+  );
+
   // faviconPlugin
   // eleventyConfig.addPlugin(faviconsPlugin, { "outputDir": "_site" });
 
