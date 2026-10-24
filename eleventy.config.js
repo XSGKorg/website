@@ -11,7 +11,12 @@ export default function (eleventyConfig) {
   // robots.txt
   const eleventyPluginRobotsTxtOptions = {
     rules: new Map([
+      ["DuckAssistBot", [{ allow: "/" }]],
+      ["DuckDuckBot", [{ allow: "/" }]],
+      ["DuckDuckGo-Favicons-Bot", [{ allow: "/" }]],
       ["ia_archiver", [{ allow: "/" }]],
+      ["MojeekBot", [{ allow: "/" }]],
+      ["search.marginalia.nu", [{ allow: "/" }]],
       ["*", [{ disallow: "/" }]],
     ]),
   };
