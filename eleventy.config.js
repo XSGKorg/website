@@ -6,8 +6,17 @@ import * as sass from "sass";
 import toml from "@iarna/toml";
 // const faviconsPlugin = require("eleventy-plugin-gen-favicons");
 const EleventyPluginRobotsTxt = require("eleventy-plugin-robotstxt");
+const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 
 export default function (eleventyConfig) {
+  // sitemap.xml
+  eleventyConfig.addPlugin(sitemap, {
+    lastModifiedProperty: "modified",
+    sitemap: {
+      hostname: "https://xsgk.org",
+    },
+  });
+
   // robots.txt
   const eleventyPluginRobotsTxtOptions = {
     rules: new Map([
