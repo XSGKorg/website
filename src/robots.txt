@@ -1,0 +1,21 @@
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: DuckDuckGo-Favicons-Bot
+Allow: /
+
+User-agent: ia_archiver
+Allow: /
+
+User-agent: MojeekBot
+Allow: /
+
+User-agent: search.marginalia.nu
+Allow: /
+
+User-agent: *
+Disallow: /
+

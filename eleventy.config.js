@@ -5,7 +5,7 @@ import * as runtime from "react/jsx-runtime";
 import * as sass from "sass";
 import toml from "@iarna/toml";
 // const faviconsPlugin = require("eleventy-plugin-gen-favicons");
-const EleventyPluginRobotsTxt = require("eleventy-plugin-robotstxt");
+eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" })
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 
 export default function (eleventyConfig) {
@@ -16,23 +16,6 @@ export default function (eleventyConfig) {
       hostname: "https://xsgk.org",
     },
   });
-
-  // robots.txt
-  const eleventyPluginRobotsTxtOptions = {
-    rules: new Map([
-      ["DuckAssistBot", [{ allow: "/" }]],
-      ["DuckDuckBot", [{ allow: "/" }]],
-      ["DuckDuckGo-Favicons-Bot", [{ allow: "/" }]],
-      ["ia_archiver", [{ allow: "/" }]],
-      ["MojeekBot", [{ allow: "/" }]],
-      ["search.marginalia.nu", [{ allow: "/" }]],
-      ["*", [{ disallow: "/" }]],
-    ]),
-  };
-  eleventyConfig.addPlugin(
-    EleventyPluginRobotsTxt,
-    eleventyPluginRobotsTxtOptions,
-  );
 
   // faviconPlugin
   // eleventyConfig.addPlugin(faviconsPlugin, { "outputDir": "_site" });
