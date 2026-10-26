@@ -7,7 +7,7 @@
     "typecheck": "bun check",
     "build:11ty": "bunx --bun eleventy",
     "build": "bun run build:11ty",
-    "dev": "bunx --bun eleventy --serve",
+    "dev": "bun run serve",
     "serve": "bunx --bun eleventy --serve"
   },
   "devDependencies": {
