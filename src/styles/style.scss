@@ -15,5 +15,9 @@ $page-font: "Newsreader", serif;
 }
 
 h1 {
+  font-family: $disp-font;
+  }
+  
+  p {
   font-family: $main-font;
 }
