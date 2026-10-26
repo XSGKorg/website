@@ -1,14 +1,17 @@
 @import "/fonts/fira-code/index.css";
 @import "/fonts/iosevka-aile/index.css";
 @import "/fonts/iosevka-etoile/index.css";
-$main-font: "Iosevka Aile", serif;
+@import "/fonts/newsreader/index.css";
 $disp-font: "Iosevka Etoile", serif;
+$main-font: "Iosevka Aile", sans-serif;
 $mono-font: "Fira Code", monospace;
+$page-font: "Newsreader", serif;
 
 :root {
-  --main-font: $main-font;
   --disp-font: $disp-font;
+  --main-font: $main-font;
   --mono-font: $mono-font;
+  --page-font: $page-font
 }
 
 h1 {

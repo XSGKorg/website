@@ -42,6 +42,7 @@ export default function (eleventyConfig) {
     engines: {
       toml: toml.parse.bind(toml),
     },
+    language: "toml",
   });
 
   // MDX
@@ -62,12 +63,18 @@ export default function (eleventyConfig) {
 
   // Fonts
   eleventyConfig.addPassthroughCopy({
+    // Fira Code
     "node_modules/@fontsource/fira-code/index.css": "fonts/fira-code/index.css",
     "node_modules/@fontsource/fira-code/files": "fonts/fira-code/files",
+    // Iosevka Aile (sans)
     "node_modules/@fontsource/iosevka-aile/index.css": "fonts/iosevka-aile/index.css",
     "node_modules/@fontsource/iosevka-aile/files": "fonts/iosevka-aile/files",
+    // Iosevka Etoile (slab)
     "node_modules/@fontsource/iosevka-etoile/index.css": "fonts/iosevka-etoile/index.css",
     "node_modules/@fontsource/iosevka-etoile/files": "fonts/iosevka-etoile/files",
+    // Newsreader
+    "node_modules/@fontsource/newsreader/index.css": "fonts/newsreader/index.css",
+    "node_modules/@fontsource/newsreader/files": "fonts/newsreader/files",
   });
 
   // SASS
@@ -80,11 +87,6 @@ export default function (eleventyConfig) {
         return result.css;
       };
     },
-  });
-
-  // Front Matter
-  eleventyConfig.setFrontMatterParsingOptions({
-    language: "toml",
   });
 
   return {

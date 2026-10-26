@@ -8,6 +8,7 @@
         "@fontsource/fira-code": "^5.3.0",
         "@fontsource/iosevka-aile": "^5.3.0",
         "@fontsource/iosevka-etoile": "^5.3.0",
+        "@fontsource/newsreader": "^5.3.0",
         "@iarna/toml": "^2.2.5",
         "@mdx-js/mdx": "^3.1.1",
         "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
@@ -57,6 +58,8 @@
     "@fontsource/iosevka-aile": ["@fontsource/iosevka-aile@5.3.0", "", {}, "sha512-XwbV3etYsHR0WZlMRJ4sXKdPSE764dQaC9lrM5qoN/yCd2BDbT8WDCJldTflOT0wbCDzS8VKll+oyTgfSgmG6g=="],
 
     "@fontsource/iosevka-etoile": ["@fontsource/iosevka-etoile@5.3.0", "", {}, "sha512-fuUgKPpwQxNghd3tak28lfwAOLd7wI7A9Bttx+BuKCqV9IBYA469dMQAVAnDnzxBC5xItASAJvEfMlvn51PfWQ=="],
+
+    "@fontsource/newsreader": ["@fontsource/newsreader@5.3.0", "", {}, "sha512-AFR6ZKY89GNL+9qBI2P2+66NhD5bhOj/v6fsLnFYLM4E0JnMB1yKb+Ro8cA64i1hwAWoBfTq5CHJGWH1toLDkw=="],
 
     "@iarna/toml": ["@iarna/toml@2.2.5", "", {}, "sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg=="],
 
