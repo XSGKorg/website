@@ -5,10 +5,12 @@ import * as runtime from "react/jsx-runtime";
 import * as sass from "sass";
 import toml from "@iarna/toml";
 // const faviconsPlugin = require("eleventy-plugin-gen-favicons");
-eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" })
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 
 export default function (eleventyConfig) {
+  // robots.txt
+  eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" })
+
   // sitemap.xml
   eleventyConfig.addPlugin(sitemap, {
     lastModifiedProperty: "modified",
