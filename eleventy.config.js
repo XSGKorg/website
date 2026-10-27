@@ -76,7 +76,7 @@ export default function (eleventyConfig) {
   });
 
   // Targets
-  eleventyConfig.addWatchTarget("src/**/");
+  eleventyConfig.addWatchTarget("src/styles/");
   return {
     dir: {
       includes: "_includes",
