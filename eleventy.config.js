@@ -4,7 +4,6 @@ import { renderToStaticMarkup } from "react-dom/server";
 import * as runtime from "react/jsx-runtime";
 import * as sass from "sass";
 import toml from "@iarna/toml";
-// const faviconsPlugin = require("eleventy-plugin-gen-favicons");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const path = require("node:path");
 
@@ -21,9 +20,6 @@ export default function (eleventyConfig) {
       hostname: "https://xsgk.org",
     },
   });
-
-  // faviconPlugin
-  // eleventyConfig.addPlugin(faviconsPlugin, { "outputDir": "_site" });
 
   // TOML
   eleventyConfig.setFrontMatterParsingOptions({
