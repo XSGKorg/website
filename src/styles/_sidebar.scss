@@ -1,0 +1,15 @@
+$sidebar-width: 15em;
+
+.sidebar {
+    height: 100%;
+    width: $sidebar-width;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+
+.main {
+    margin-left: $sidebar-width;
+}

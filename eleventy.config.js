@@ -6,10 +6,13 @@ import * as sass from "sass";
 import toml from "@iarna/toml";
 // const faviconsPlugin = require("eleventy-plugin-gen-favicons");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
+const path = require("node:path");
 
 export default function (eleventyConfig) {
-  // robots.txt
-  eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" })
+  // Passthroughs
+  eleventyConfig.addPassthroughCopy({
+    "src/robots.txt": "robots.txt",
+  });
 
   // sitemap.xml
   eleventyConfig.addPlugin(sitemap, {
@@ -66,14 +69,18 @@ export default function (eleventyConfig) {
   eleventyConfig.addTemplateFormats("scss");
   eleventyConfig.addExtension("scss", {
     outputFileExtension: "css",
-    compile: async function (inputContent) {
-      let result = sass.compileString(inputContent);
-      return async (data) => {
-        return result.css;
-      };
+    compile: async function (inputContent, inputPath) {
+      const parsed = path.parse(inputPath);
+      if (parsed.name.startsWith("_")) return;
+      const result = sass.compileString(inputContent, {
+        loadPaths: [parsed.dir || "."],
+      });
+      return async () => result.css;
     },
   });
 
+  // Targets
+  eleventyConfig.addWatchTarget("src/**/");
   return {
     dir: {
       includes: "_includes",
