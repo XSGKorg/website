@@ -8,18 +8,18 @@
 @import "/fonts/newsreader/index.css";
 
 $disp-font: "Iosevka Etoile", serif;
-$main-font: "Iosevka Aile", sans-serif;
+$sans-font: "Iosevka Aile", sans-serif;
 $mono-font: "Fira Code", monospace;
-$page-font: "Newsreader", serif;
+$type-font: "Newsreader", serif;
 
 h1 {
   font-family: $disp-font;
 }
 
 p {
-  font-family: $main-font;
+  font-family: $type-font;
 }
 
 .sidebar {
-  font-family: $mono-font;
+  font-family: $sans-font;
 }
