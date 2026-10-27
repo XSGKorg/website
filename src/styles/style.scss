@@ -1,10 +1,12 @@
 // Require
 @use "sidebar";
+
 // Fonts
 @import "/fonts/fira-code/index.css";
 @import "/fonts/iosevka-aile/index.css";
 @import "/fonts/iosevka-etoile/index.css";
 @import "/fonts/newsreader/index.css";
+
 $disp-font: "Iosevka Etoile", serif;
 $main-font: "Iosevka Aile", sans-serif;
 $mono-font: "Fira Code", monospace;
@@ -16,4 +18,8 @@ h1 {
 
 p {
   font-family: $main-font;
+}
+
+.sidebar {
+  font-family: $mono-font;
 }
