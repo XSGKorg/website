@@ -2,10 +2,24 @@
 @use "sidebar";
 
 // Fonts
-@import "/fonts/fira-code/index.css";
-@import "/fonts/iosevka-aile/index.css";
-@import "/fonts/iosevka-etoile/index.css";
-@import "/fonts/newsreader/index.css";
+// Fira Code
+@import "/fonts/fira-code/cyrillic.css";
+@import "/fonts/fira-code/greek-ext.css";
+@import "/fonts/fira-code/greek.css";
+@import "/fonts/fira-code/latin-ext.css";
+@import "/fonts/fira-code/latin.css";
+@import "/fonts/fira-code/symbols2.css";
+// Iosevka Aile
+@import "/fonts/iosevka-aile/latin-italic.css";
+@import "/fonts/iosevka-aile/latin.css";
+// Iosevka Etoile
+@import "/fonts/iosevka-etoile/latin-italic.css";
+@import "/fonts/iosevka-etoile/latin.css";
+// Newsreader
+@import "/fonts/newsreader/latin-ext-italic.css";
+@import "/fonts/newsreader/latin-ext.css";
+@import "/fonts/newsreader/latin-italic.css";
+@import "/fonts/newsreader/latin.css";
 
 $disp-font: "Iosevka Etoile", serif;
 $sans-font: "Iosevka Aile", sans-serif;
