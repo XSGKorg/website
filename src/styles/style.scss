@@ -26,12 +26,26 @@ $sans-font: "Iosevka Aile", sans-serif;
 $mono-font: "Fira Code", monospace;
 $type-font: "Newsreader", serif;
 
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: complement($color: blue);
+  text-decoration: underline;
+}
+
 h1 {
   font-family: $disp-font;
 }
 
+i {
+  font-style: inherit;
+}
+
 p {
   font-family: $type-font;
+
+  ul { font-family: inherit;}
 }
 
 .sidebar {
