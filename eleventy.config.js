@@ -1,11 +1,13 @@
 import { pathToFileURL } from "node:url";
 import { evaluate } from "@mdx-js/mdx";
 import { renderToStaticMarkup } from "react-dom/server";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import * as runtime from "react/jsx-runtime";
 import * as sass from "sass";
 import toml from "@iarna/toml";
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const path = require("node:path");
+const eleventySass = require("eleventy-sass");
 
 export default function (eleventyConfig) {
   // Passthroughs
@@ -30,6 +32,7 @@ export default function (eleventyConfig) {
   });
 
   // MDX
+  eleventyConfig.addPlugin(syntaxHighlight, { templateFormats: ["*", "mdx"] });
   eleventyConfig.addExtension("mdx", {
     compile: async (str, inputPath) => {
       const { default: mdxContent } = await evaluate(str, {
@@ -43,7 +46,6 @@ export default function (eleventyConfig) {
       }
     }
   });
-  eleventyConfig.addTemplateFormats("mdx")
 
   // Fonts
   eleventyConfig.addPassthroughCopy({
@@ -72,21 +74,36 @@ export default function (eleventyConfig) {
   });
 
   // SASS
-  eleventyConfig.addTemplateFormats("scss");
-  eleventyConfig.addExtension("scss", {
-    outputFileExtension: "css",
-    compile: async function (inputContent, inputPath) {
-      const parsed = path.parse(inputPath);
-      if (parsed.name.startsWith("_")) return;
-      const result = sass.compileString(inputContent, {
-        loadPaths: [parsed.dir || "."],
-      });
-      return async () => result.css;
-    },
-  });
+  eleventyConfig.addPlugin(eleventySass);
+  // eleventyConfig.addExtension("scss", {
+	// 	outputFileExtension: "css",
+
+	// 	useLayouts: false,
+
+	// 	compile: async function (inputContent, inputPath) {
+	// 		let parsed = path.parse(inputPath);
+	// 		if(parsed.name.startsWith("_")) {
+	// 			return;
+	// 		}
+
+	// 		let result = sass.compileString(inputContent, {
+	// 			loadPaths: [
+	// 				parsed.dir || ".",
+	// 				this.config.dir.includes,
+	// 			]
+	// 		});
+
+	// 		this.addDependencies(inputPath, result.loadedUrls);
+
+	// 		return async (data) => {
+	// 			return result.css;
+	// 		};
+	// 	},
+	// });
 
   // Targets
-  eleventyConfig.addWatchTarget("src/styles/");
+  eleventyConfig.addTemplateFormats("mdx")
+  // eleventyConfig.addWatchTarget("src/styles/");
   return {
     dir: {
       includes: "_includes",

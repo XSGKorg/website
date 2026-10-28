@@ -13,6 +13,8 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-img": "^7.1.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "@types/bun": "latest"
   },
   "peerDependencies": {
@@ -31,6 +33,7 @@
     "@mdx-js/mdx": "^3.1.1",
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
     "badge-maker": "^6.0.0",
+    "eleventy-sass": "^3.0.0-beta.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "sass": "^1.106.1"
