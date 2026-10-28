@@ -28,11 +28,12 @@ $mono-font: "Fira Code", monospace;
 $type-font: "Newsreader", serif;
 
 a {
-  text-decoration: none;
+  color: inherit;
+  text-decoration: underline;
 }
 a:hover {
-  color: complement($color: blue);
   text-decoration: underline;
+  text-decoration-color: complement($color: blue);
 }
 
 h1 {
