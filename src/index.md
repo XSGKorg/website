@@ -7,4 +7,5 @@ title = "Home"
 # XSGK.org
 [![built](/badges/built.svg)](https://github.com/XSGKorg/website)[![license](/badges/license.svg)](https://github.com/XSGKorg/website/blob/main/LICENSE)![version](/badges/version.svg)
 <hr></hr>
+
 [Contact](contact/) [Contribute](contribute/)
