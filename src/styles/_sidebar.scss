@@ -1,8 +1,8 @@
-$sidebar-width: 15em;
+@use "globals";
 
 .sidebar {
     height: 100%;
-    width: $sidebar-width;
+    width: globals.$sidebar-width;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -11,5 +11,5 @@ $sidebar-width: 15em;
 }
 
 .main {
-    margin-left: $sidebar-width;
+    margin-left: globals.$sidebar-width;
 }

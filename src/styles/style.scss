@@ -1,4 +1,5 @@
 // Require
+@use "globals";
 @use "sidebar";
 @use "code";
 
@@ -22,11 +23,6 @@
 @import "/fonts/newsreader/latin-italic.css";
 @import "/fonts/newsreader/latin.css";
 
-$disp-font: "Iosevka Etoile", serif;
-$sans-font: "Iosevka Aile", sans-serif;
-$mono-font: "Fira Code", monospace;
-$type-font: "Newsreader", serif;
-
 a {
   color: inherit;
   text-decoration: underline;
@@ -37,7 +33,7 @@ a:hover {
 }
 
 h1 {
-  font-family: $disp-font;
+  font-family: globals.$disp-font;
 }
 
 i {
@@ -45,11 +41,11 @@ i {
 }
 
 p {
-  font-family: $type-font;
+  font-family: globals.$type-font;
 
   ul { font-family: inherit;}
 }
 
 .sidebar {
-  font-family: $sans-font;
+  font-family: globals.$sans-font;
 }
