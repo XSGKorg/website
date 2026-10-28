@@ -1,9 +1,4 @@
-import { pathToFileURL } from "node:url";
-import { evaluate } from "@mdx-js/mdx";
-import { renderToStaticMarkup } from "react-dom/server";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import * as runtime from "react/jsx-runtime";
-import * as sass from "sass";
 import toml from "@iarna/toml";
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const path = require("node:path");
@@ -31,22 +26,6 @@ export default function (eleventyConfig) {
     language: "toml",
   });
 
-  // MDX
-  eleventyConfig.addPlugin(syntaxHighlight, { templateFormats: ["*", "mdx"] });
-  eleventyConfig.addExtension("mdx", {
-    compile: async (str, inputPath) => {
-      const { default: mdxContent } = await evaluate(str, {
-        ...runtime,
-        baseUrl: pathToFileURL(inputPath)
-      });
-
-      return async function (data) {
-        let res = await mdxContent(data);
-        return renderToStaticMarkup(res);
-      }
-    }
-  });
-
   // Fonts
   eleventyConfig.addPassthroughCopy({
     // Fira Code
@@ -71,38 +50,11 @@ export default function (eleventyConfig) {
     "node_modules/@fontsource/newsreader/latin-italic.css": "fonts/newsreader/latin-italic.css",
     "node_modules/@fontsource/newsreader/latin.css": "fonts/newsreader/latin.css",
     "node_modules/@fontsource/newsreader/files": "fonts/newsreader/files",
-  });
-
-  // SASS
-  eleventyConfig.addPlugin(eleventySass);
-  // eleventyConfig.addExtension("scss", {
-	// 	outputFileExtension: "css",
-
-	// 	useLayouts: false,
-
-	// 	compile: async function (inputContent, inputPath) {
-	// 		let parsed = path.parse(inputPath);
-	// 		if(parsed.name.startsWith("_")) {
-	// 			return;
-	// 		}
-
-	// 		let result = sass.compileString(inputContent, {
-	// 			loadPaths: [
-	// 				parsed.dir || ".",
-	// 				this.config.dir.includes,
-	// 			]
-	// 		});
-
-	// 		this.addDependencies(inputPath, result.loadedUrls);
-
-	// 		return async (data) => {
-	// 			return result.css;
-	// 		};
-	// 	},
-	// });
+  });  
 
   // Targets
-  eleventyConfig.addTemplateFormats("mdx")
+  eleventyConfig.addPlugin(eleventySass);
+  eleventyConfig.addPlugin(syntaxHighlight, { templateFormats: ["*"] });
   // eleventyConfig.addWatchTarget("src/styles/");
   return {
     dir: {
