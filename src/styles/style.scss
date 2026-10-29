@@ -5,23 +5,23 @@
 
 // Fonts
 // Fira Code
-@import "/fonts/fira-code/cyrillic.css";
-@import "/fonts/fira-code/greek-ext.css";
-@import "/fonts/fira-code/greek.css";
-@import "/fonts/fira-code/latin-ext.css";
-@import "/fonts/fira-code/latin.css";
-@import "/fonts/fira-code/symbols2.css";
+@use "../../node_modules/@fontsource/fira-code/cyrillic.css" as fira-code-cyrillic;
+@use "../../node_modules/@fontsource/fira-code/greek-ext.css" as fira-code-greek-ext;
+@use "../../node_modules/@fontsource/fira-code/greek.css" as fira-code-greek;
+@use "../../node_modules/@fontsource/fira-code/latin-ext.css" as fira-code-latin-ext;
+@use "../../node_modules/@fontsource/fira-code/latin.css" as fira-code-latin;
+@use "../../node_modules/@fontsource/fira-code/symbols2.css" as fira-code-symbols2;
 // Iosevka Aile
-@import "/fonts/iosevka-aile/latin-italic.css";
-@import "/fonts/iosevka-aile/latin.css";
+@use "../../node_modules/@fontsource/iosevka-aile/latin-italic.css" as iosevka-aile-latin-italic;
+@use "../../node_modules/@fontsource/iosevka-aile/latin.css" as iosevka-aile-latin;
 // Iosevka Etoile
-@import "/fonts/iosevka-etoile/latin-italic.css";
-@import "/fonts/iosevka-etoile/latin.css";
+@use "../../node_modules/@fontsource/iosevka-etoile/latin-italic.css" as iosevka-etoile-latin-italic;
+@use "../../node_modules/@fontsource/iosevka-etoile/latin.css" as iosevka-etoile-latin;
 // Newsreader
-@import "/fonts/newsreader/latin-ext-italic.css";
-@import "/fonts/newsreader/latin-ext.css";
-@import "/fonts/newsreader/latin-italic.css";
-@import "/fonts/newsreader/latin.css";
+@use "../../node_modules/@fontsource/newsreader/latin-ext-italic.css" as newsreader-latin-ext-italic;
+@use "../../node_modules/@fontsource/newsreader/latin-ext.css" as newsreader-latin-ext;
+@use "../../node_modules/@fontsource/newsreader/latin-italic.css" as newsreader-latin-italic;
+@use "../../node_modules/@fontsource/newsreader/latin.css" as newsreader-latin;
 
 a {
   color: inherit;
