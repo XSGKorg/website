@@ -26,14 +26,15 @@
 a {
   color: globals.$link-color;
   text-decoration: underline;
-  text-decoration-thickness: 2px;
-}
-a:hover {
+  text-decoration-thickness: 0.2em;
+  
+  hover {
   background-color: globals.$link-color;
   color: globals.$link-hover-color;
   text-decoration: none;
   text-decoration-color: globals.$link-color;
   font-style: inherit;
+  }
 }
 
 h1 {
