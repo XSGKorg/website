@@ -6,11 +6,22 @@ title = "Contributing"
 ---
 # Contributing
 
+1. Clone this repository
 ```shell
-git clone https://github.com/XSGKorg/website
+git clone https://github.com/XSGKorg/website.git  
 cd website
-bun install
+```
+
+2. Create a fork
+
+3. Start the development server with [bun](https://bun.dev)
+```shell
+bun install  
 bun run serve
 ```
 
-- Open a pull request or issue on the [Github repository](https://github.com/XSGKorg/website).
+4. Make your changes
+
+5. Submit a pull request
+
+6. done.
