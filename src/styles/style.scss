@@ -23,11 +23,6 @@
 @use "../../node_modules/@fontsource/newsreader/latin-italic.css" as newsreader-latin-italic;
 @use "../../node_modules/@fontsource/newsreader/latin.css" as newsreader-latin;
 
-a {
-  color: globals.$link-color;
-  text-decoration: underline;
-  text-decoration-thickness: 0.2em;
-}
 a:hover {
   background-color: globals.$link-color;
   color: globals.$link-hover-color;
@@ -37,24 +32,34 @@ a:hover {
   font-style: inherit;
 }
 
+::selection { background-color: globals.$accent-color; }
+
 h1 {
   font-family: globals.$disp-font;
+
+  &::before {
+    content: "# ";
+    visibility: hidden;
+  }
+
+  &:hover::before {
+    visibility: visible;
+  }
 }
 
-::selection {
-  background-color: globals.$accent-color;
-}
 
-i {
-  font-style: inherit;
-}
+i { font-style: inherit; }
 
 p {
+  a {
+  color: globals.$link-color;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+  }
+
   font-family: globals.$type-font;
 
-  ul { font-family: inherit;}
+  ul { font-family: inherit; }
 }
 
-.sidebar {
-  font-family: globals.$sans-font;
-}
+.sidebar { font-family: globals.$sans-font; }
