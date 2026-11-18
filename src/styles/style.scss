@@ -23,13 +23,19 @@
 @use "../../node_modules/@fontsource/newsreader/latin-italic.css" as newsreader-latin-italic;
 @use "../../node_modules/@fontsource/newsreader/latin.css" as newsreader-latin;
 
-a:hover {
+a {
+  color: globals.$link-color;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+
+  &:hover {
   background-color: globals.$link-color;
   color: globals.$link-hover-color;
   text-decoration: underline;
   text-decoration-thickness: 0.2em;
   text-decoration-color: globals.$accent-color;
   font-style: inherit;
+  }
 }
 
 ::selection { background-color: globals.$accent-color; }
@@ -51,12 +57,6 @@ h1 {
 i { font-style: inherit; }
 
 p {
-  a {
-  color: globals.$link-color;
-  text-decoration: underline;
-  text-decoration-thickness: 0.2em;
-  }
-
   font-family: globals.$type-font;
 
   ul { font-family: inherit; }
