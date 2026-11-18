@@ -31,13 +31,18 @@ a {
 a:hover {
   background-color: globals.$link-color;
   color: globals.$link-hover-color;
-  text-decoration: none;
-  text-decoration-color: globals.$link-color;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+  text-decoration-color: globals.$accent-color;
   font-style: inherit;
 }
 
 h1 {
   font-family: globals.$disp-font;
+}
+
+::selection {
+  background-color: globals.$accent-color;
 }
 
 i {
