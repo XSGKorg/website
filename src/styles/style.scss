@@ -48,6 +48,10 @@ a {
 h1 {
   font-family: globals.$disp-font;
 
+  :hover {
+    font-style: italic;
+  }
+
   &::before {
     content: "# ";
     visibility: hidden;
@@ -55,6 +59,7 @@ h1 {
 
   &:hover::before {
     visibility: visible;
+    font-style: italic;
   }
 }
 
