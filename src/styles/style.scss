@@ -67,6 +67,9 @@ h1 {
 
 i { font-style: inherit; }
 
-p { font-family: globals.$sans-font; }
+p {
+  font-family: globals.$sans-font;
+  tab-size: 2;
+}
 
 .sidebar { font-family: globals.$sans-font; }
