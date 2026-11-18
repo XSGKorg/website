@@ -23,6 +23,11 @@
 @use "../../node_modules/@fontsource/newsreader/latin-italic.css" as newsreader-latin-italic;
 @use "../../node_modules/@fontsource/newsreader/latin.css" as newsreader-latin;
 
+:root {
+  background-color: globals.$bg-color;
+  color: globals.$text-color;
+}
+
 a {
   color: globals.$link-color;
   text-decoration: underline;
